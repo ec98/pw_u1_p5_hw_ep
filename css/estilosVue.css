@@ -1,0 +1,84 @@
+body {
+  background: rgb(178, 228, 228);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+  font-size: 30px;
+  margin: 30px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+}
+
+h2 {
+  margin: 10px 120px;
+  padding-bottom: 5px;
+  text-align: center;
+  color: rgb(65, 97, 118);
+  width: 100px;
+  border-bottom: 3px solid rgb(65, 97, 118);
+}
+
+.formulario {
+  display: grid;
+  width: 340px;
+  height: 370px;
+  background: white;
+  border-radius: 5px;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 40px -10px hsl(0, 0%, 0%);
+}
+
+label:before {
+  content: attr(type);
+  display: block;
+  margin: 14px 0px;
+  font-size: 19px;
+  color: #5a5a5a;
+}
+
+input {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #bebed2;
+}
+input:focus {
+  border-bottom: 2px solid #78788c;
+}
+
+.btnAgregar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+table {
+  width: 40px;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #000;
+  text-align: left;
+  padding: 8px;
+}
+th {
+  background: white;
+}
+
+tr:hover {
+  background-color: aquamarine;
+}

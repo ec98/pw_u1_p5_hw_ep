@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+    <link rel="stylesheet" href="../css/estilosVue.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <header>Campo Armada</header>
+    <section>
+      <div id="miVue" class="container">
+        <div class="formulario">
+          <h2>Persona</h2>
+          <label for="idnombre">Nombre:</label>
+          <input @:keypress id="idnombre" type="text" v-model="nombre" />
+
+          <label for="idapellido">Apellido:</label>
+          <input @:keypress id="idapellido" type="text" v-model="apellido" />
+          <label for="idpais">Pais:</label>
+          <input @:keypress id="idpais" type="text" v-model="pais" />
+
+          <label for="idciudad">Ciudad:</label>
+          <input @:keypress id="idciudad" type="text" v-model="ciudad" />
+
+          <label for="idgenero">Genero:</label>
+          <input
+            @:keypress.enter="agregarPersonaPorTecla"
+            id="idgenero"
+            type="text"
+            v-model="genero"
+          />
+          <div class="btnAgregar">
+            <button @:click="agregarPerson">Agregar</button>
+          </div>
+        </div>
+        <table>
+          <tr>
+            <th></th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Pais</th>
+            <th>Ciudad</th>
+            <th>Genero</th>
+          </tr>
+          <tr v-for="({nombre, apellido, pais, ciudad, genero},index) in lista">
+            <td>{{index + 1}}</td>
+            <td>{{nombre}}</td>
+            <td>{{apellido}}</td>
+            <td>{{pais}}</td>
+            <td>{{ciudad}}</td>
+            <td>{{genero}}</td>
+          </tr>
+        </table>
+
+        <div class="list">
+          <ul v-for="({nombre,apellido,ciudad,pais, genero}, index) in lista">
+            <p
+              v-if="nombre === null || apellido === null || ciudad === null || pais === null || genero === null? false : true"
+            >
+              {{index + 1}} - {{nombre}} - {{apellido}} - {{pais}} - {{ciudad}}
+              - {{genero}}
+            </p>
+          </ul>
+        </div>
+      </div>
+      <script src="../js/appVue.js"></script>
+    </section>
+  </body>
+</html>
