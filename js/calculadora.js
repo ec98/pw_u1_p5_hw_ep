@@ -40,5 +40,5 @@ function resetNumeros(){
     resta = 0;
     multiplicacion = 1;
     division = 1;
-    document.getElementById('idresult').innerText = '0';
+    document.getElementById('idresult').innerText = '';
 }

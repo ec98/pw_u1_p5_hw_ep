@@ -4,34 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora</title>
-    <script src="../js/calculadoraOperaciones.js"></script>
+    <script src="../js/calculadora.js"></script>
+    <link rel="stylesheet" href="../css/calculadora.css">
   </head>
   <body>
-    <header>
-      <!-- el br causa problemas por el identificador -->
-      <h1>Mi Calculadora</h1>
-    </header>
-    <nav></nav>
-    <section>
-      <button id="id0" onclick="numero('id0')">0</button>
-      <button id="id1" onclick="numero('id1')">1</button>
-      <button id="id2" onclick="numero('id2')">2</button>
-      <button id="id3" onclick="numero('id3')">3</button>
-      <button id="id4" onclick="numero('id4')">4</button>
-      <button id="id5" onclick="numero('id5')">5</button>
-      <button id="id6" onclick="numero('id6')">6</button>
-      <button id="id7" onclick="numero('id7')">7</button>
-      <button id="id8" onclick="numero('id8')">8</button>
-      <button id="id9" onclick="numero('id9')">9</button>
-      <br />
-      <button onclick="operacionSuma()">+</button>
-      <button onclick="operacionResta()">-</button>
-      <button onclick="operacionMultiplicacion()">*</button>
-      <button onclick="operacionDivision()">/</button>
-      <button onclick="resetNumeros()">R</button>
-      <br />
-      <label id="idresult" for=""></label>
-    </section>
+    <div class="container">
+      <header>
+        <!-- el br causa problemas por el identificador -->
+      </header>
+      <nav></nav>
+      <section>
+        <div class="calculadora-general">
+          <h1>Mi Calculadora</h1>
+          <label id="idresult" for=""></label>
+        <div class="calculadora-numeros">
+          <button id="id1" onclick="numero('id1')">1</button>
+          <button id="id2" onclick="numero('id2')">2</button>
+          <button id="id3" onclick="numero('id3')">3</button>
+          <button id="id4" onclick="numero('id4')">4</button>
+          <button id="id5" onclick="numero('id5')">5</button>
+          <button id="id6" onclick="numero('id6')">6</button>
+          <button id="id7" onclick="numero('id7')">7</button>
+          <button id="id8" onclick="numero('id8')">8</button>
+          <button id="id9" onclick="numero('id9')">9</button>
+          <button class="col-3" id="id0" onclick="numero('id0')">0</button>
+        </div>
+        <div class="calculadora-operaciones">
+          <button onclick="operacionSuma()">+</button>
+          <button onclick="operacionResta()">-</button>
+          <button onclick="operacionMultiplicacion()">*</button>
+          <button onclick="operacionDivision()">/</button>
+          <button class="col-2" onclick="resetNumeros()">R</button>
+        </div>
+      </div>
+      </section>
+    </div>
     <!-- <aside></aside> -->
     <footer>Todos los derechos reservados por ec98 2023</footer>
   </body>
